@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #ffffff;
+    --bg: #242424;
+    --primary: hsl(188, 80%, 50%);
+    --red: hsl(19, 80%, 50%);
+    --green: hsl(105, 80%, 50%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.container .start {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .2);
+    padding: 5rem;
+    border-radius: 1rem;
+}
+
+.container .start.hidden {
+    display: none;
+}
+
+.start .title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.start button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: .1rem solid var(--text);
+    background: var(--primary);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.container .pattern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, .2);
+    padding: 5rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.container .pattern.hidden {
+    display: none;
+}
+
+.pattern .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pattern .action-box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(100, 100, 100, .2);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.action-box .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.action-box .message-box {
+    margin-bottom: 2rem;
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, .4), transparent);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--red);
+    transition: .3s;
+}
+
+.action-box .message-box.hidden {
+    overflow: hidden;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.action-box .input-container {
+    display: flex;
+}
+
+.input-container .input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-box input {
+    width: 70%;
+    height: 5rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.input-box input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.input-box input:focus~label,
+.input-box input:not(:placeholder-shown)~label {
+    top: -50%;
+    background: var(--text);
+    transform: translateY(70%);
+    opacity: 1;
+    color: var(--primary);
+    border-radius: .5rem;
+}
+
+.input-box input~label {
+    position: absolute;
+    left: 0;
+    color: var(--bg);
+    opacity: .4;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+    text-align: center;
+    pointer-events: none;
+    transition: .3s;
+    font-size: 1.4rem;
+}
+
+.input-container .generate-button button {
+    height: 100%;
+    padding: 0 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: .1rem solid var(--text);
+    background: var(--primary);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.pattern .grid-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-box .grid-row {
+    display: flex;
+}
+
+.grid-box .grid-col {
+    background: rgba(255, 255, 255, .1);
+    border-radius: .5rem;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: .5rem;
+    width: 5rem;
+    height: 5rem;
+    color: var(--text);
+    transition: .3s;
+}
+
+.grid-col.active {
+    color: var(--primary);
+}
+
+.grid-col.done {
+    color: var(--green);
+}
+
+.grid-box .grid-col {
+    color: var(--green);
+}
+
+
+
+.pattern .exit {
+    margin-top: 2rem;
+}
+
+.exit button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: .1rem solid var(--text);
+    background: var(--red);
+    color: var(--text);
+    cursor: pointer;
+}

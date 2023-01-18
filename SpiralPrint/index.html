@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spiral Print</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="start">
+            <div class="title">
+                <p>Hit the Button to see Magic</p>
+            </div>
+            <button onclick="hideStartPage()">Start</button>
+        </div>
+        <div class="pattern hidden">
+            <div class="title">
+                <p>Spiral Printing of a 2-D array using javascript with some <b>delay</b>.</p>
+            </div>
+            <div class="action-box">
+                <div class="title">
+                    <p>Generate a grid of row x column</p>
+                </div>
+                <div class="message-box hidden">
+                </div>
+                <div class="input-container">
+                    <div class="input-box">
+                        <input type="number" id="row" placeholder=" ">
+                        <label for="row">Row</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" id="col" placeholder=" ">
+                        <label for="col">Column</label>
+                    </div>
+                    <div class="generate-button">
+                        <button onclick="startGame()">Execute</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-box">
+            </div>
+            <div class="exit">
+                <button onclick="showStartPage()">Back</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
