@@ -196,13 +196,6 @@ body {
     color: var(--primary);
 }
 
-.grid-col.done {
-    color: var(--green);
-}
-
-.grid-box .grid-col {
-    color: var(--green);
-}
 
 
 
