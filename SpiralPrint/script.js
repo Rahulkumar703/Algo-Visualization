@@ -53,6 +53,7 @@ function print(element, count) {
     }, count * 500);
 }
 
+
 function startGame() {
     generateGrids();
     const gridRows = document.querySelectorAll('.grid-row');
@@ -90,4 +91,35 @@ function startGame() {
         }
     }
     delete (arr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Back funtionality
+
+const backButton = document.querySelector('.back');
+
+const navigation = window.navigation;
+
+if (navigation.canGoBack) {
+    backButton.classList.remove('faded');
+}
+else {
+    backButton.classList.add('faded');
+}
+
+const navigateBack = () => {
+    navigation.canGoBack && navigation.back();
 }

@@ -5,13 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon End -->
+    <link rel="stylesheet" href="style.css">
+    <title>Devil's Algo Visualizer</title>
 </head>
 
 <body>
-    <h1>Mode with Rage By Devil</h1>
-    <a href="./SpiralPrint/index.html">Spiral Visualizer</a>
-    <h4>thankyou Devil</h4>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="back faded" onclick="navigateBack()">&#8617</div>
+            <div class="title">
+                <a href="/index.html">
+                    <h1>Algorithms Visualizer</h1>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End-->
+
+
+    <!-- main Container -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="title">Table of Content</div>
+            <ul class="content-lists">
+                <li>
+                    <a href="./SpiralPrint/index.html">Spiral Print</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- Sidebar End -->
+
+        <!-- main body -->
+        <section class="algo-section">
+            <div class="title">
+                Select an Algorithm
+            </div>
+            <div class="algo-container">
+                <div class="algo">
+                    <a href="./SpiralPrint/index.html">Spiral Print</a>
+                </div>
+            </div>
+        </section>
+        <!-- main body End-->
+
+    </div>
+    <!-- main Container End-->
+
+
+    <!-- Footer -->
+    <footer>
+        <h2>Made With Rage By <a target="_blank" href="https://github.com/Rahulkumar703">Devil</a></h2>
+    </footer>
+    <!-- Footer End-->
+
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
