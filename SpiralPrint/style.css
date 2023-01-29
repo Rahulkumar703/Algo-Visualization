@@ -22,6 +22,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     min-height: 100vh;
+    height: auto;
     flex-direction: column;
 }
 
@@ -74,12 +75,13 @@ nav .title {
 
 
 .container {
-    height: calc(100vh - 14rem);
+    min-height: calc(100vh - 14rem);
+    height: auto;
+    padding: 1rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
 }
 
 .container .start {
